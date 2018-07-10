@@ -29,8 +29,8 @@ initial_lr=0.001
 batch_size=1
 num_classes=3
 max_steps=10000
-log_dir = '/home/shantams/deep-learning/tf/logs' #path to log files
-image_dir = '/home/shantams/weednet/weedNet/data/Sequoia/SequoiaNdvi_30/testNdvi.txt #path to dataset
+log_dir = '/path to file/logs' #path to log files
+image_dir = '/path to file/testNdvi.txt #path to dataset
 
 #----------------------------------------------------------------------------------------------
 def msra_initializer(kl, dl):
