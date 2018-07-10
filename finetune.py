@@ -28,8 +28,8 @@ initial_lr=0.001
 batch_size=1
 num_classes=3
 max_steps=20000
-log_dir = '/home/shantams/deep-learning/tf/logs/Test'
-image_dir = '/home/shantams/weednet/weedNet/data/Sequoia/SequoiaNdvi_30/testNdvi.txt' 
+log_dir = '/path to file/logs' #path to log files
+image_dir = '/path to file/trainNdvi.txt' #path to image dataset
 
 #----------------------------------------------------------------------------------------------
 def msra_initializer(kl, dl):
@@ -320,7 +320,7 @@ def train(total_loss, global_step):
 def model(one):
 	global max_steps, batch_size, image_w, image_h, image_c, image_dir, log_dir, log_dir
 	startstep=9000
-	finetune_ckpt='/home/shantams/deep-learning/tf/logs/Test/model.ckpt-9000'
+	finetune_ckpt='/path/to/files/model.ckpt-9000'
 	image_filenames, label_filenames = get_filename_list(image_dir)
 	with tf.Graph().as_default():
 		train_data_node = tf.placeholder( tf.float32, shape=[batch_size, image_h, image_w, image_c])
